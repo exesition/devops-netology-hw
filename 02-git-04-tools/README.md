@@ -122,7 +122,7 @@ git log -S 'synchronizedWriters' --oneline
 git show 5ac311e2a9 -s --pretty=%an
 ```
 
-- **Ответ:** 
+- **Ответ:**<br> 
 git log -S 'synchronizedWriters' --oneline - выведет коммиты, в которых есть совпадения с указанно функцией. Забираем самый нижний
 
 > **bdfea50cc8** remove unused
