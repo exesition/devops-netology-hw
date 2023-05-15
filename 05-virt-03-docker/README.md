@@ -33,6 +33,7 @@
 - реализуйте функциональность:
 запуск веб-сервера в фоне с индекс-страницей, содержащей HTML-код ниже:
 
+
 ```bash
 <html>
 <head>
@@ -48,8 +49,9 @@ Hey, Netology
 
 <details>
 <summary>**Ответ**</summary>
+
 Репозиторий:
-https://hub.docker.com/repository/docker/exesition/nginx_hw/general
+https://hub.docker.com/repository/docker/exesition/nginx_hw/
 
 **Вывод:**
 ```bash
