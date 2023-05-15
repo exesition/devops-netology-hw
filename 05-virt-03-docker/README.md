@@ -53,8 +53,7 @@ Hey, Netology
 
 >Репозиторий:
 >https://hub.docker.com/repository/docker/exesition/nginx_hw/
-<details>
-<summary>Детали</summary>
+
 **Вывод:**
 ```bash
 exe@exe-ubuntu:~/Desktop/docker/docker_ansible$ sudo docker run -d -p 80:80 exesition/nginx_hw:v1
@@ -74,7 +73,6 @@ Hey, Netology
 </body>
 </html>
 ```
-</details>
 
 ## Задача 2
 
