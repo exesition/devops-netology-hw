@@ -47,12 +47,14 @@ Hey, Netology
 
 Опубликуйте созданный fork в своём репозитории и предоставьте ответ в виде ссылки на https://hub.docker.com/username_repo
 
+---
+
+**Ответ:**<br>
+
+>Репозиторий:
+>https://hub.docker.com/repository/docker/exesition/nginx_hw/
 <details>
-<summary>**Ответ**</summary>
-
-Репозиторий:
-https://hub.docker.com/repository/docker/exesition/nginx_hw/
-
+<summary>Детали</summary>
 **Вывод:**
 ```bash
 exe@exe-ubuntu:~/Desktop/docker/docker_ansible$ sudo docker run -d -p 80:80 exesition/nginx_hw:v1
@@ -97,7 +99,6 @@ Hey, Netology
 ---
 
 **Ответ:**<br>
-<details>
 
 - Высоконагруженное монолитное java веб-приложение;
 > Самое зарекомендовавшее себя решение - Физический сервер. Не нужно тратить ресурсы на виртуализацию. Видел что есть и специальные образы для docker-a, где тюнится память, но много но...
@@ -117,10 +118,6 @@ Hey, Netology
 > Можно использовать ВМ или Docker. Использование физического сервера выглядит немного старомодным.
 
 
-
-</details>
-
-
 ## Задача 3
 
 - Запустите первый контейнер из образа ***centos*** c любым тегом в фоновом режиме, подключив папку ```/data``` из текущей рабочей директории на хостовой машине в ```/data``` контейнера.
@@ -129,10 +126,11 @@ Hey, Netology
 - Добавьте ещё один файл в папку ```/data``` на хостовой машине.
 - Подключитесь во второй контейнер и отобразите листинг и содержание файлов в ```/data``` контейнера.
 
-**Ответ:**<br>
-<details>
+---
 
-1. Запускаем первый контейнер из образа centos с тэгом latest и подключаем папку /data на хостовой машине в /data контейнера:
+**Ответ:**<br>
+
+>1. Запускаем первый контейнер из образа centos с тэгом latest и подключаем папку /data на хостовой машине в /data контейнера:
 
 ```bash
 docker run -d -v $(pwd)/data:/data --name centos_container centos:latest
@@ -144,7 +142,7 @@ Status: Downloaded newer image for centos:latest
 6ccb7d5c34290d6633329d8e14669c0d8d9c3737b9af4af4d8f77e93ad468803
 ```
 
-2. Запускаем второй контейнер из образа debian с тэгом latest и подключаем папку /data на хостовой машине в /data контейнера:
+>2. Запускаем второй контейнер из образа debian с тэгом latest и подключаем папку /data на хостовой машине в /data контейнера:
 
 ```bash
 docker run -d -v $(pwd)/data:/data --name debian_container debian:latest
@@ -156,7 +154,7 @@ Status: Downloaded newer image for debian:latest
 cb413e6c5a54746707d4505407e9d84f14103dfe81473cc3b679a634b2e028a4
 ```
 
-3. Подключаемся к первому контейнеру и создаем текстовый файл в /data:
+>3. Подключаемся к первому контейнеру и создаем текстовый файл в /data:
 
 ```bash
 docker exec -it centos_container bash
@@ -165,13 +163,13 @@ echo "Write from docker-centos container" >> /data/centos.txt
 exit
 ```
 
-4. Добавляем еще один файл в папку /data на хостовой машине:
+>4. Добавляем еще один файл в папку /data на хостовой машине:
 ```bash
 root@exe-ubuntu:~# cd data/
 root@exe-ubuntu:~/data# echo "Localhost" >> ./localhost.txt 
 ```
 
-5. Подключаемся ко второму контейнеру и отображаем листинг и содержание файлов в /data контейнера:
+>5. Подключаемся ко второму контейнеру и отображаем листинг и содержание файлов в /data контейнера:
 
 ```bash
 docker exec -it debian_container bash
@@ -180,13 +178,15 @@ ls -l
 -rw-r--r-- 1 root root 17 May 15 11:10 centos.txt
 -rw-r--r-- 1 root root 10 May 15 11:13 localhost.txt
 ```
-</details>
+
 
 ## Задача 4 (*)
 
 Воспроизведите практическую часть лекции самостоятельно.
 
 Соберите Docker-образ с Ansible, загрузите на Docker Hub и пришлите ссылку вместе с остальными ответами к задачам.
+
+---
 
 **Ответ:**<br>
 https://hub.docker.com/repository/docker/exesition/ansible/
