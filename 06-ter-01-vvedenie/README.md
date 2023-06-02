@@ -60,9 +60,9 @@
 
 Были допущены следующие ошибки:
 
-1.Строка resource "docker_image" { не содержит "name". Сущности подобного плана должны содержать (type,name)
-2.Строка resource "docker_container" "1nginx"  содержит "1nginx", что неверно. Допускаются только символы, а не цифры.  
-3.Переменная ${random_password.random_string_fake.resuld}. Не объялено имя и не правильно задано поле result
+-Строка resource "docker_image" { не содержит "name". Сущности подобного плана должны содержать (type,name)<br>
+-Строка resource "docker_container" "1nginx"  содержит "1nginx", что неверно. Допускаются только символы, а не цифры.<br>  
+-Переменная ${random_password.random_string_fake.resuld}. Не объялено имя и не правильно задано поле result<br>
 
 <details> <summary>Скриншот</summary>
 
@@ -115,6 +115,18 @@ shekeriev.
 В качестве ответа приложите plan для создаваемого ресурса и скриншот созданного в VB ресурса. 
 ---
 **Ответ:**<br>
+Пришлось помучаться с ошибкой:
+```bash
+
+│ Error: can’t create virtualbox VM debian-11: exit status 1
+│
+│ with virtualbox_vm.vm1,
+│ on main.tf line 19, in resource “virtualbox_vm” “vm1”:
+│ 19: resource “virtualbox_vm” “vm1” {
+
+``` 
+А потом еще дополнительным сюрпризом стало, что ВМ создавалась, но я ее не видел т.к. экземпляр Virtualbox был открыт из под
+другого пользователя отличного от того под которым terraform создавал ВМ. Забавный момент.
 
 <p align="center">
   <img src="./screenshot/2vm_tf.png">
