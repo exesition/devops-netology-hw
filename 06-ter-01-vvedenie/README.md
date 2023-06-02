@@ -60,9 +60,9 @@
 
 Были допущены следующие ошибки:
 
--Строка resource "docker_image" { не содержит "name". Сущности подобного плана должны содержать (type,name)<br>
--Строка resource "docker_container" "1nginx"  содержит "1nginx", что неверно. Допускаются только символы, а не цифры.<br>  
--Переменная ${random_password.random_string_fake.resuld}. Не объялено имя и не правильно задано поле result<br>
+- Строка resource "docker_image" { не содержит "name". Сущности подобного плана должны содержать (type,name)
+- Строка resource "docker_container" "1nginx"  содержит "1nginx", что неверно. Допускаются только символы, а не цифры.  
+- Переменная ${random_password.random_string_fake.resuld}. Не объялено имя и не правильно задано поле result
 
 <details> <summary>Скриншот</summary>
 
