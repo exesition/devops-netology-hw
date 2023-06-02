@@ -13,6 +13,14 @@
 2. Скачайте на свой ПК данный git репозиторий. Исходный код для выполнения задания расположен в директории **01/src**.
 3. Убедитесь, что в вашей ОС установлен docker.
 
+<details> <summary>Версия terraform</summary>
+
+<p align="center">
+<img src="./screenshot/terraform_v.png">
+</p>
+</details>
+
+
 ------
 
 ### Инструменты и дополнительные материалы, которые пригодятся для выполнения задания
@@ -52,14 +60,14 @@
 
 Были допущены следующие ошибки:
 
-> Строка resource "docker_image" { не содержит "name". Сущности подобного плана должны содержать (type,name)
-> Строка resource "docker_container" "1nginx"  содержит "1nginx", что неверно. Допускаются только символы, а не цифры.  
-> Переменная ${random_password.random_string_fake.resuld}. Не объялено имя и не правильно задано поле result
+> 1.Строка resource "docker_image" { не содержит "name". Сущности подобного плана должны содержать (type,name)
+> 2.Строка resource "docker_container" "1nginx"  содержит "1nginx", что неверно. Допускаются только символы, а не цифры.  
+> 3.Переменная ${random_password.random_string_fake.resuld}. Не объялено имя и не правильно задано поле result
 
 <details> <summary>Скриншот</summary>
 
 <p align="center"> 
-<img src="./screenshot/1_4 maintf.png">
+<img src="./screenshot/1_4maintf code.png">
 </p>
 </details>
 
@@ -73,7 +81,7 @@
 Объясните своими словами, в чем может быть опасность применения ключа  ```-auto-approve``` ? В качестве ответа дополнительно приложите вывод команды ```docker ps```
 
 >Команда `terraform apply -auto-approve` автоматически применяет изменения без запроса подтверждения пользователя. Это может быть опасно, если в конфигурации есть ошибки или изменения могут привести к нежелательным последствиям. Например, это может привести к удалению важных ресурсов
-
+<br>
 <p align="center">
   <img src="./screenshot/1_6docker_hellow_workd.png">
 </p>
@@ -86,6 +94,7 @@
 
 8. Объясните, почему при этом не был удален docker образ **nginx:latest** ? Ответ подкрепите выдержкой из документации провайдера.
 
+>В конфигурации использовался параметр keep_locally = true
 >keep_locally (Boolean) If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from the docker local storage on destroy operation.
 >https://registry.terraform.io/providers/rohdealx/docker/latest/docs/resources/image
 
@@ -104,6 +113,14 @@ shekeriev.
 2. Создайте с его помощью любую виртуальную машину. Чтобы не использовать VPN советуем выбрать любой образ с расположением в github из [**списка**](https://www.vagrantbox.es/)
 
 В качестве ответа приложите plan для создаваемого ресурса и скриншот созданного в VB ресурса. 
+---
+**Ответ:**<br>
+
+<p align="center">
+  <img src="./screenshot/2vm_tf.png">
+</p>
+
+
 
 ------
 
