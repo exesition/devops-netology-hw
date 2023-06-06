@@ -24,6 +24,7 @@ https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups.
 **Ответ:**<br>
 Доступ выдан 
 
+---
 
 ### Задание 1
 
@@ -50,7 +51,7 @@ https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups.
 │   on main.tf line 15, in resource "yandex_compute_instance" "platform":
 │   15: resource "yandex_compute_instance" "platform" {
 ```
-Исходя из текста ошибки в параметрах `cores` должно быть указано четное колиество ядер `2 или 4`, а у нас стоит `1` 
+Исходя из текста ошибки в параметрах `cores` должно быть указано четное колиество ядер `2 или 4`, а у нас стоит `1`<br> 
 [**Оф. документация**](https://cloud.yandex.ru/docs/compute/concepts/performance-levels)
 
 5. Ответьте, как в процессе обучения могут пригодиться параметры```preemptible = true``` и ```core_fraction=5``` в параметрах ВМ? Ответ в документации Yandex cloud.
@@ -64,9 +65,11 @@ https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups.
 <details> <summary>Скриншот подключения в ВМ</summary>
 
 <p align="center"> 
-<img src="./screenshot/01_04_vm.png">
+<img src="https://github.com/exesition/devops-netology-hw/blob/terraform-02/06-ter-02-base/screenshots/01_04_vm.png">
 </p>
 </details>
+
+---
 
 ### Задание 2
 
@@ -80,7 +83,7 @@ https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups.
 **Ответ:**<br>
 
 <p align="center"> 
-<img src="./screenshot/02_variable_web.png">
+<img src="https://github.com/exesition/devops-netology-hw/blob/terraform-02/06-ter-02-base/screenshots/02_variable_web.png">
 </p>
 
 <details> <summary>Детали</summary>
@@ -183,7 +186,7 @@ resource "yandex_compute_instance" "platform" {
 ```
 </details>
 
-
+---
 
 ### Задание 3
 
@@ -323,6 +326,7 @@ resource "yandex_compute_instance" "vm_db" {
 ```
 </details>
 
+---
 
 ### Задание 4
 
@@ -336,7 +340,7 @@ resource "yandex_compute_instance" "vm_db" {
 **Ответ:**<br>
 
 <p align="center"> 
-<img src="./screenshot/04_outputtf.png">
+<img src="https://github.com/exesition/devops-netology-hw/blob/terraform-02/06-ter-02-base/screenshot/04_outputtf.png">
 </p>
 
 <details> <summary>Детали</summary>
@@ -396,6 +400,8 @@ output "vm_external_ip_address" {
 
 </details>
 
+---
+
 ### Задание 5
 
 1. В файле locals.tf опишите в **одном** local-блоке имя каждой ВМ, используйте интерполяцию ${..} с несколькими переменными по примеру из лекции.
@@ -407,7 +413,7 @@ output "vm_external_ip_address" {
 **Ответ:**<br>
 
 <p align="center"> 
-<img src="./screenshot/05_local_var.png">
+<img src="https://github.com/exesition/devops-netology-hw/blob/terraform-02/06-ter-02-base/screenshots/05_local_var.png">
 </p>
 
 <details> <summary>Детали</summary>
@@ -441,6 +447,8 @@ locals {
 
 </details>
 
+---
+
 ### Задание 6
 
 1. Вместо использования 3-х переменных  ".._cores",".._memory",".._core_fraction" в блоке  resources {...}, объедените их в переменные типа **map** с именами "vm_web_resources" и "vm_db_resources".
@@ -453,10 +461,10 @@ locals {
 **Ответ:**<br>
 
 <p align="center"> 
-<img src="./screenshot/06_plan.png">
+<img src="https://github.com/exesition/devops-netology-hw/blob/terraform-02/06-ter-02-base/screenshots/06_plan.png">
 </p>
 
-[**Файлы проекта src/**](https://github.com/exesition/devops-netology-hw/tree/main/06-ter-02-base/src)
+[**Файлы проекта src/**](https://github.com/exesition/devops-netology-hw/blob/terraform-02/06-ter-02-base/screenshots/src)
 
 <details> <summary>Детали</summary>
 
@@ -539,11 +547,15 @@ variable "vm_metadata" {
 
 В качестве решения предоставьте необходимые команды и их вывод.
 
+---
+
 **Ответ:**<br>
 Можно было бы отдельно задать переменные, но через `local.` проще и быстрее выйдет и тоже самое
 <p align="center"> 
-<img src="./screenshot/07_external_work.png">
+<img src="https://github.com/exesition/devops-netology-hw/blob/terraform-02/06-ter-02-base/screenshots/07_external_work.png">
 </p>
+
+---
 
 
 ------
