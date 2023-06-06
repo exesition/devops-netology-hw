@@ -340,8 +340,9 @@ resource "yandex_compute_instance" "vm_db" {
 **Ответ:**<br>
 
 <p align="center"> 
-<img src="https://github.com/exesition/devops-netology-hw/blob/terraform-02/06-ter-02-base/screenshot/04_outputtf.png">
+<img src="https://github.com/exesition/devops-netology-hw/blob/terraform-02/06-ter-02-base/screenshots/04_outputtf.png">
 </p>
+
 
 <details> <summary>Детали</summary>
 
