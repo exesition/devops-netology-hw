@@ -23,7 +23,7 @@ variable "vm_db_platform_id" {
 }
 
 variable "vm_db_resources" {
-  type = map(any)
+  type = map
   default = {
     cores         = 2
     memory        = 2

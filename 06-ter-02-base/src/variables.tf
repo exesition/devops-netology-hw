@@ -55,7 +55,7 @@ variable "vm_web_platform_id" {
 }
 
 variable "vm_web_resources" {
-  type = map(any)
+  type = map
   default = {
     cores         = 2
     memory        = 1
