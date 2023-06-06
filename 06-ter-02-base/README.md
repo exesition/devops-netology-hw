@@ -115,7 +115,7 @@ variable "vm_web_platform_id" {
 }
 
 variable "vm_web_resources" {
-  type = map(any)
+  type = map
   default = {
     cores         = 2
     memory        = 1
@@ -228,7 +228,7 @@ variable "vm_db_platform_id" {
 }
 
 variable "vm_db_resources" {
-  type = map(any)
+  type = map
   default = {
     cores         = 2
     memory        = 2
@@ -475,7 +475,7 @@ locals {
 #name for interpolation in variable.tf
 
 variable "vm_web_resources" {
-  type = map(any)
+  type = map
   default = {
     cores         = 2
     memory        = 1
@@ -485,7 +485,7 @@ variable "vm_web_resources" {
 ```
 ```yaml
 variable "vm_db_resources" {
-  type = map(any)
+  type = map
   default = {
     cores         = 2
     memory        = 2
@@ -504,7 +504,7 @@ variable "vm_db_resources" {
 variable "vm_metadata" {
   type = map(object({
     serial-port-enable = number
-    ssh-keys           = any
+    ssh-keys           = string
   }))
   default = {
     "metadata" = {

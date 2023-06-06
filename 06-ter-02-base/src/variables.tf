@@ -82,7 +82,7 @@ variable "vm_web_network_interface_nat" {
 variable "vm_metadata" {
   type = map(object({
     serial-port-enable = number
-    ssh-keys           = any
+    ssh-keys           = string
   }))
   default = {
     "metadata" = {
