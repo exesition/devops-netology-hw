@@ -1,4 +1,3 @@
-###cloud vars
 variable "token" {
   type        = string
   description = "OAuth-token; https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token"
@@ -30,18 +29,13 @@ variable "vpc_name" {
   default     = "develop"
   description = "VPC network & subnet name"
 }
-#========================================
 
-###image&platform
 variable "vm_image" {
   type        = string
   default     = "ubuntu-2004-lts"
   description = "yandex_compute_image"
 }
 
-#=========================================
-
-###instance resources vars
 variable "vm_web_name" {
   type        = string
   default     = "netology-develop-platform-web"
@@ -55,7 +49,7 @@ variable "vm_web_platform_id" {
 }
 
 variable "vm_web_resources" {
-  type = map
+  type = map(number)
   default = {
     cores         = 2
     memory        = 1
@@ -69,31 +63,26 @@ variable "vm_web_preemptible" {
   description = "scheduling_policy"
 }
 
-#network_interface 
 variable "vm_web_network_interface_nat" {
   type        = bool
   default     = true
   description = "network_interface_nat"
 }
 
-#=============================================
-
-#metadata
 variable "vm_metadata" {
-  type = map(object({
+  type = object({
     serial-port-enable = number
     ssh-keys           = string
-  }))
+  })
   default = {
-    "metadata" = {
-      serial-port-enable = 1
-      ssh-keys           = "ubuntu:<ssh-key from machine>"
-    }
+    serial-port-enable = 1
+    ssh-keys           = "ubuntu:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII+NIpEX7M1OBxjRk9MKiwuSOc+1P2lfMvojrZ7MZSyh root@exe-ubuntu"
   }
 }
 
-#name for interpolation in local.tf
 
+
+#name for interpolation in local.tf
 variable "domen" {
   type        = string
   default     = "netology-develop"
