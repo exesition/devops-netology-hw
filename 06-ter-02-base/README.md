@@ -460,7 +460,7 @@ locals {
 ---
 
 **Ответ:**<br>
-
+Ключ в ssh-key закрашен
 <p align="center"> 
 <img src="https://github.com/exesition/devops-netology-hw/blob/terraform-02/06-ter-02-base/screenshots/06_plan.png">
 </p>
