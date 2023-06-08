@@ -115,7 +115,7 @@ variable "vm_web_platform_id" {
 }
 
 variable "vm_web_resources" {
-  type = map
+  type = map(number)
   default = {
     cores         = 2
     memory        = 1
@@ -228,7 +228,7 @@ variable "vm_db_platform_id" {
 }
 
 variable "vm_db_resources" {
-  type = map
+  type = map(number)
   default = {
     cores         = 2
     memory        = 2
@@ -389,13 +389,13 @@ Error: Error in function call
 ```
 По всей видимости измененный вариант был бы в таком случае таким:
 ```yaml
-output "vm_external_ip_address" {
- value = tomap({
-   "yandex_compute_instance.platform" = yandex_compute_instance.platform.network_interface.0.nat_ip_address,
-    "yandex_compute_instance.vm_db" = yandex_compute_instance.vm_db.network_interface.0.nat_ip_address
-     }
-   )
- }
+output "instance_ips" {
+  value = tomap({
+    "${yandex_compute_instance.platform.name}" = yandex_compute_instance.platform.network_interface.0.nat_ip_address
+    "${yandex_compute_instance.vm_db.name}"    = yandex_compute_instance.vm_db.network_interface.0.nat_ip_address
+    }
+  )
+}
  ```
 
 
@@ -475,7 +475,7 @@ locals {
 #name for interpolation in variable.tf
 
 variable "vm_web_resources" {
-  type = map
+  type = map(number)
   default = {
     cores         = 2
     memory        = 1
@@ -485,7 +485,7 @@ variable "vm_web_resources" {
 ```
 ```yaml
 variable "vm_db_resources" {
-  type = map
+  type = map(number)
   default = {
     cores         = 2
     memory        = 2
@@ -502,10 +502,10 @@ variable "vm_db_resources" {
 ```yaml
 #metadata
 variable "vm_metadata" {
-  type = map(object({
+  type = object({
     serial-port-enable = number
     ssh-keys           = string
-  }))
+  })
   default = {
     "metadata" = {
       serial-port-enable = 1
@@ -523,7 +523,7 @@ variable "vm_metadata" {
     nat       = var.vm_db_network_interface_nat
   }
 
-  metadata = var.vm_metadata.metadata
+  metadata = var.vm_metadata
 
 }
 
