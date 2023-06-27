@@ -58,7 +58,11 @@
 
 
 **Ответ:**<br>
+<<<<<<< HEAD
 Файлы конфигурации:<br>
+=======
+Файлы конфигурации:
+>>>>>>> c21fa0b (Add 06-terr-03-tf)
 [count-vm.tf](https://github.com/exesition/devops-netology-hw/blob/terraform-03/06-ter-03-tf/src/count-vm.tf) <br>
 [for_each-vm.tf](https://github.com/exesition/devops-netology-hw/blob/terraform-03/06-ter-03-tf/src/for_each-vm.tf)
 
@@ -66,13 +70,18 @@
 
 
 <p align="center"> 
+<<<<<<< HEAD
 <img src="https://github.com/exesition/devops-netology-hw/blob/terraform-03/06-ter-03-tf/screenshots/02_count-vm_01.png">
+=======
+<img src="https://github.com/exesition/devops-netology-hw/blob/terraform-03/06-ter-03-tf/screenshots/01_private_rule.png">
+>>>>>>> c21fa0b (Add 06-terr-03-tf)
 </p>
 
 <p align="center"> 
 <img src="https://github.com/exesition/devops-netology-hw/blob/terraform-03/06-ter-03-tf/screenshots/02_04_pusk.png">
 </p>
 
+<<<<<<< HEAD
 
 <p align="center"> 
 <img src="https://github.com/exesition/devops-netology-hw/blob/terraform-03/06-ter-03-tf/screenshots/02_count-vm_hosts.png">
@@ -80,6 +89,13 @@
 
 
 <p align="center"> 
+=======
+<p align="center"> 
+<img src="https://github.com/exesition/devops-netology-hw/blob/terraform-03/06-ter-03-tf/screenshots/02_count-vm_01.png">
+</p>
+
+<p align="center"> 
+>>>>>>> c21fa0b (Add 06-terr-03-tf)
 <img src="https://github.com/exesition/devops-netology-hw/blob/terraform-03/06-ter-03-tf/screenshots/02_count-vm_bezopasnost.png">
 </p>
 
@@ -98,7 +114,11 @@
 
 **Ответ:**<br>
 
+<<<<<<< HEAD
 Файл конфигурации:<br>
+=======
+Файлы конфигурации:
+>>>>>>> c21fa0b (Add 06-terr-03-tf)
 [disk_vm.tf](https://github.com/exesition/devops-netology-hw/blob/terraform-03/06-ter-03-tf/src/disk_vm.tf)
 
 <details> <summary>Скриншоты</summary>
