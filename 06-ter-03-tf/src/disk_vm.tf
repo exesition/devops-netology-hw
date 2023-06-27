@@ -6,7 +6,7 @@ resource "yandex_compute_disk" "disk_count_creating" {
   size  = 1
 }
 
-## make storage VM
+
 resource "yandex_compute_instance" "storage" {
   name        = "storage"
   platform_id = var.vm_web_platform_id
