@@ -26,6 +26,28 @@
 
 ------
 
+
+**Ответ:**<br>
+<p align="center"> 
+<img src="https://github.com/exesition/devops-netology-hw/blob/terraform-04/06-ter-04-module/screenshots/01_code.png">
+</p>
+<p align="center"> 
+<img src="https://github.com/exesition/devops-netology-hw/blob/terraform-04/06-ter-04-module/screenshots/01_nginx_ok.png">
+</p>
+
+Файлы конфигурации:<br>
+[cloud-init.yml](https://github.com/exesition/devops-netology-hw/blob/terraform-04/06-ter-04-module/src/cloud-init.yml) <br>
+[main.tf](https://github.com/exesition/devops-netology-hw/blob/terraform-04/06-ter-04-module/src/main.tf)
+
+<details> <summary>Детали</summary>
+
+Сразу заменил параметры сети на данные из модуля (задания 2)
+
+</details>
+
+------
+
+
 ### Задание 2
 
 1. Напишите локальный модуль vpc, который будет создавать 2 ресурса: **одну** сеть и **одну** подсеть в зоне, объявленной при вызове модуля. например: ```ru-central1-a```.
@@ -42,12 +64,48 @@ module "vpc_dev" {
   cidr = "10.0.1.0/24"
 }
 ```
+------
+
+
+**Ответ:**<br>
+
+<p align="center"> 
+<img src="https://github.com/exesition/devops-netology-hw/blob/terraform-04/06-ter-04-module/screenshots/02.png">
+</p>
+
+Файлы конфигурации:<br>
+[Модуль vpc](https://github.com/exesition/devops-netology-hw/blob/terraform-04/06-ter-04-module/src/vpc) <br>
+[README.md vpc](https://github.com/exesition/devops-netology-hw/blob/terraform-04/06-ter-04-module/src/vpc/README.md) <br>
+
+<details> <summary>Детали</summary>
+Час возился с ошибкой terraform-docs:
+Error: Failed to read module directory: Module directory /modules (tg://bot_command?command=modules)/vpc (tg://bot_command?command=vpc)/ does not exist or cannot be read
+
+Оказалось криво поставился плагин из snap пакета в ubuntu. Так и не победил его окружение. Поэтому поставил бинарники
+в /usr/local/terraform-docs и все взлетело
+
+Далее 
+ /usr/local/terraform-docs markdown /prom/06_ter/04/src/modules/vpc/ >> README.md
+
+Пробовал поиграться с параметрами довольно разношерстная штука
+</details>
+------
 
 ### Задание 3
 1. Выведите список ресурсов в стейте.
 2. Удалите из стейта модуль vpc.
 3. Импортируйте его обратно. Проверьте terraform plan - изменений быть не должно.
 Приложите список выполненных команд и вывод.
+
+------
+
+**Ответ:**<br>
+
+<p align="center"> 
+<img src="https://github.com/exesition/devops-netology-hw/blob/terraform-04/06-ter-04-module/screenshots/02.png">
+</p>
+
+------
 
 ## Дополнительные задания (со звездочкой*)
 
