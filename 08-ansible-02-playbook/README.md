@@ -47,6 +47,7 @@
 
 <details> <summary>Лог отработки anisble-playbook</summary>
 
+```bash
 root@exe-ubuntu:/prom/devops-netology/08-ansible-02-playbook/playbook# ansible-playbook -i inventory/prod.yml site.yml
 
 PLAY [Install Clickhouse] **************************************************************************************************************************************************************
@@ -90,6 +91,7 @@ ok: [vm-0]
 PLAY RECAP *****************************************************************************************************************************************************************************
 vm-0                       : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 vm-1                       : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=1    ignored=0   
+```
 </details>
 
 ------
@@ -103,6 +105,7 @@ vm-1                       : ok=4    changed=0    unreachable=0    failed=0    s
 
 <details> <summary>Лог отработки ansible-playbook -i inventory/prod.yml site.yml --check</summary>
 
+```bash
 root@exe-ubuntu:/prom/devops-netology/08-ansible-02-playbook/playbook# ansible-playbook -i inventory/prod.yml site.yml --check
 
 PLAY [Install Clickhouse] **************************************************************************************************************************************************************
@@ -146,6 +149,7 @@ ok: [vm-0]
 PLAY RECAP *****************************************************************************************************************************************************************************
 vm-0                       : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 vm-1                       : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=1    ignored=0   
+```
 
 </details>
 
@@ -176,7 +180,7 @@ vm-1                       : ok=8    changed=7    unreachable=0    failed=0    s
 
 <details> <summary>Лог отработки ansible-playbook -i inventory/prod.yml site.yml --diff</summary>
 
-
+```bash
 root@exe-ubuntu:/prom/devops-netology/08-ansible-02-playbook/playbook# ansible-playbook -i inventory/prod.yml site.yml --diff
 
 PLAY [Install Clickhouse] **************************************************************************************************************************************************************
@@ -220,6 +224,7 @@ ok: [vm-0]
 PLAY RECAP *****************************************************************************************************************************************************************************
 vm-0                       : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 vm-1                       : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=1    ignored=0   
+```
 </details>
 
 
@@ -234,7 +239,7 @@ vm-1                       : ok=4    changed=0    unreachable=0    failed=0    s
 ------ 
 
 **Ответ:**<br>
-Ссылка на файл README.md:
+Ссылка на файл README.md:<br>
  [README.md](./playbook/README.md)
 
 ------ 
