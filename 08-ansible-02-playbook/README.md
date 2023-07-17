@@ -249,7 +249,7 @@ vm-1                       : ok=4    changed=0    unreachable=0    failed=0    s
 
 
 10.  Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-02-playbook` на фиксирующий коммит, в ответ предоставьте ссылку на него.
-[tag](https://github.com/exesition/devops-netology/releases/tag/08-ansible-02-playbook)
+[tag](https://github.com/exesition/devops-netology/releases/tag/08-ansible-02-playbook](https://github.com/exesition/devops-netology-hw/releases/tag/08-ansible-02-playbook)
 
 
 ### Как оформить решение задания
