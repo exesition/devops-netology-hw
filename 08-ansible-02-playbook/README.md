@@ -96,6 +96,9 @@ vm-1                       : ok=4    changed=0    unreachable=0    failed=0    s
 
 ------
 
+
+
+
 6. Попробуйте запустить playbook на этом окружении с флагом `--check`.
 
 ------ 
