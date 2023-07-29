@@ -134,12 +134,16 @@
 
 6. Попробуйте запустить playbook на этом окружении с флагом `--check`.
 
+
 <p align="center">
   <img src="./screenshots/03_check.png">
 </p
 
 
-<details> <summary>Листинг --check</summary>
+<details> 
+
+<summary>Листинг --check</summary>
+
 
 ```bash 
 
@@ -223,18 +227,14 @@ vm02                       : ok=6    changed=0    unreachable=0    failed=0    s
 vm03                       : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 
 ```
-
-
-
 </details>
-
 
 
 7. Запустите playbook на `prod.yml` окружении с флагом `--diff`. Убедитесь, что изменения на системе произведены.
 
 <p align="center">
   <img src="./screenshots/04_diff.png">
-</p
+</p>
 
 
 
@@ -323,9 +323,8 @@ vm03                       : ok=8    changed=0    unreachable=0    failed=0    s
 
 ```
 
-
-
 </details>
+
 
 
 8. Повторно запустите playbook с флагом `--diff` и убедитесь, что playbook идемпотентен.
