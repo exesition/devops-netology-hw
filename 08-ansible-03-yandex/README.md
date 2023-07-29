@@ -137,15 +137,11 @@
 
 <p align="center">
   <img src="./screenshots/03_check.png">
-</p
+</p>
 
+<details> <summary>Листинг --check</summary>
 
-<details> 
-
-<summary>Листинг --check</summary>
-
-
-```bash 
+```bash
 
 root@exe-ubuntu:/prom/devops-netology/08-ansible-03-yandex/playbook# ansible-playbook -i inventory/prod.yml playbook.yml --check
 
@@ -227,6 +223,7 @@ vm02                       : ok=6    changed=0    unreachable=0    failed=0    s
 vm03                       : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 
 ```
+
 </details>
 
 
