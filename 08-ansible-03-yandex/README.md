@@ -138,6 +138,7 @@
   <img src="./screenshots/03_check.png">
 </p
 
+
 <details> <summary>Листинг --check</summary>
 
 ```bash
@@ -225,13 +226,12 @@ vm03                       : ok=8    changed=0    unreachable=0    failed=0    s
 
 
 
-
-
 7. Запустите playbook на `prod.yml` окружении с флагом `--diff`. Убедитесь, что изменения на системе произведены.
 
 <p align="center">
   <img src="./screenshots/04_diff.png">
 </p
+
 
 
 <details> <summary>Листинг --diff</summary>
@@ -318,6 +318,7 @@ vm03                       : ok=8    changed=0    unreachable=0    failed=0    s
 
 ```
 </details>
+
 
 8. Повторно запустите playbook с флагом `--diff` и убедитесь, что playbook идемпотентен.
 9. Подготовьте README.md-файл по своему playbook. В нём должно быть описано: что делает playbook, какие у него есть параметры и теги.
