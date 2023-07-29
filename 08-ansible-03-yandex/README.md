@@ -28,9 +28,9 @@
 
 **Ответ:**<br>
 
-1. При создании tasks рекомендую использовать модули: `get_url`, `template`, `yum`, `apt`.
-2. Tasks должны: скачать статику LightHouse, установить Nginx или любой другой веб-сервер, настроить его конфиг для открытия LightHouse, запустить веб-сервер.
-3. Подготовьте свой inventory-файл `prod.yml`.
+1. Допишите playbook: нужно сделать ещё один play, который устанавливает и настраивает LightHouse.
+2. При создании tasks рекомендую использовать модули: `get_url`, `template`, `yum`, `apt`.
+3. Tasks должны: скачать статику LightHouse, установить Nginx или любой другой веб-сервер, настроить его конфиг для открытия LightHouse, запустить веб-сервер.
 
 Создаем машины в облаке YC
 
@@ -38,8 +38,6 @@
   <img src="./screenshots/01_create_vm.png">
 </p>
 
-
-1. Допишите playbook: нужно сделать ещё один play, который устанавливает и настраивает LightHouse.
 
 Ссылка на файлы lighthouse:<br>
  [lighthouse vars](./playbook/group_vars/lighthouse/vars.yml) <br>
@@ -119,21 +117,28 @@
 ```
 </details>
 
-4. Запустите `ansible-lint site.yml` и исправьте ошибки, если они есть.
 
-При запуске команды были найдены ошибки. Исправил.
+4. Подготовьте свой inventory-файл `prod.yml`. <br>
+
+[prod.yml](./playbook/inventory/prod.yml) <br>
+
+
+5. Запустите `ansible-lint site.yml` и исправьте ошибки, если они есть.
+
+При запуске команды были найдены ошибки. Исправил. <br>
+
 <p align="center">
   <img src="./screenshots/lint.png">
 </p>
 
 
-5. Попробуйте запустить playbook на этом окружении с флагом `--check`.
+6. Попробуйте запустить playbook на этом окружении с флагом `--check`.
 
 <p align="center">
   <img src="./screenshots/03_check.png">
 </p
 
-<details>  <summary>Листинг</summary>
+<details> <summary>Листинг --check</summary>
 
 ```bash
 root@exe-ubuntu:/prom/devops-netology/08-ansible-03-yandex/playbook# ansible-playbook -i inventory/prod.yml playbook.yml --check
@@ -223,14 +228,14 @@ vm03                       : ok=8    changed=0    unreachable=0    failed=0    s
 
 
 
-1. Запустите playbook на `prod.yml` окружении с флагом `--diff`. Убедитесь, что изменения на системе произведены.
+7. Запустите playbook на `prod.yml` окружении с флагом `--diff`. Убедитесь, что изменения на системе произведены.
 
 <p align="center">
   <img src="./screenshots/04_diff.png">
 </p
 
 
-<details> <summary>Листинг</summary>
+<details> <summary>Листинг --diff</summary>
 
 ```bash
 root@exe-ubuntu:/prom/devops-netology/08-ansible-03-yandex/playbook# ansible-playbook -i inventory/prod.yml playbook.yml --diff
@@ -316,9 +321,9 @@ vm03                       : ok=8    changed=0    unreachable=0    failed=0    s
 ```
 </details>
 
-7. Повторно запустите playbook с флагом `--diff` и убедитесь, что playbook идемпотентен.
-8. Подготовьте README.md-файл по своему playbook. В нём должно быть описано: что делает playbook, какие у него есть параметры и теги.
-9.  Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-03-yandex` на фиксирующий коммит, в ответ предоставьте ссылку на него.
+8. Повторно запустите playbook с флагом `--diff` и убедитесь, что playbook идемпотентен.
+9. Подготовьте README.md-файл по своему playbook. В нём должно быть описано: что делает playbook, какие у него есть параметры и теги.
+10.  Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-03-yandex` на фиксирующий коммит, в ответ предоставьте ссылку на него.
 
 
 ## Проверка Lighthouse и Nginx
