@@ -140,7 +140,6 @@
 
 
 <details> <summary>Листинг --check</summary>
-
 ```bash
 root@exe-ubuntu:/prom/devops-netology/08-ansible-03-yandex/playbook# ansible-playbook -i inventory/prod.yml playbook.yml --check
 
@@ -235,7 +234,6 @@ vm03                       : ok=8    changed=0    unreachable=0    failed=0    s
 
 
 <details> <summary>Листинг --diff</summary>
-
 ```bash
 root@exe-ubuntu:/prom/devops-netology/08-ansible-03-yandex/playbook# ansible-playbook -i inventory/prod.yml playbook.yml --diff
 
