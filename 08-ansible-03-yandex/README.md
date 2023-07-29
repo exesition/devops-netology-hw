@@ -141,7 +141,8 @@
 
 <details> <summary>Листинг --check</summary>
 
-```bash
+```bash 
+
 root@exe-ubuntu:/prom/devops-netology/08-ansible-03-yandex/playbook# ansible-playbook -i inventory/prod.yml playbook.yml --check
 
 PLAY [Install Nginx] ************************************************************************************************************************************************
@@ -220,7 +221,11 @@ PLAY RECAP *********************************************************************
 vm01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=2    rescued=1    ignored=0   
 vm02                       : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 vm03                       : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
 ```
+
+
+
 </details>
 
 
@@ -236,6 +241,7 @@ vm03                       : ok=8    changed=0    unreachable=0    failed=0    s
 <details> <summary>Листинг --diff</summary>
 
 ```bash
+
 root@exe-ubuntu:/prom/devops-netology/08-ansible-03-yandex/playbook# ansible-playbook -i inventory/prod.yml playbook.yml --diff
 
 PLAY [Install Nginx] ************************************************************************************************************************************************
@@ -314,14 +320,17 @@ PLAY RECAP *********************************************************************
 vm01                       : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=1    ignored=0   
 vm02                       : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 vm03                       : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0 
+
 ```
+
+
 
 </details>
 
 
 8. Повторно запустите playbook с флагом `--diff` и убедитесь, что playbook идемпотентен.
 9. Подготовьте README.md-файл по своему playbook. В нём должно быть описано: что делает playbook, какие у него есть параметры и теги.
-10.  Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-03-yandex` на фиксирующий коммит, в ответ предоставьте ссылку на него.
+10. Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-03-yandex` на фиксирующий коммит, в ответ предоставьте ссылку на него.
 
 
 ## Проверка Lighthouse и Nginx
