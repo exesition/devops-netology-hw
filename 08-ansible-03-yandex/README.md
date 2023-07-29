@@ -133,7 +133,7 @@
   <img src="./screenshots/03_check.png">
 </p
 
-<details> <summary>Листинг</summary>
+<details>  <summary>Листинг</summary>
 
 ```bash
 root@exe-ubuntu:/prom/devops-netology/08-ansible-03-yandex/playbook# ansible-playbook -i inventory/prod.yml playbook.yml --check
@@ -215,8 +215,6 @@ vm01                       : ok=3    changed=0    unreachable=0    failed=0    s
 vm02                       : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 vm03                       : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 
-
-
 ```
 
 </details>
@@ -225,11 +223,12 @@ vm03                       : ok=8    changed=0    unreachable=0    failed=0    s
 
 
 
-6. Запустите playbook на `prod.yml` окружении с флагом `--diff`. Убедитесь, что изменения на системе произведены.
+1. Запустите playbook на `prod.yml` окружении с флагом `--diff`. Убедитесь, что изменения на системе произведены.
 
 <p align="center">
   <img src="./screenshots/04_diff.png">
 </p
+
 
 <details> <summary>Листинг</summary>
 
@@ -315,7 +314,6 @@ vm03                       : ok=8    changed=0    unreachable=0    failed=0    s
 
 
 ```
-
 </details>
 
 7. Повторно запустите playbook с флагом `--diff` и убедитесь, что playbook идемпотентен.
@@ -323,8 +321,8 @@ vm03                       : ok=8    changed=0    unreachable=0    failed=0    s
 9.  Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-03-yandex` на фиксирующий коммит, в ответ предоставьте ссылку на него.
 
 
-## Проверка nginx и lighthouse
-<img src="./screenshots/06_lighthouse.png06_lighthouse.png">
+## Проверка Lighthouse и Nginx
+<img src="./screenshots/06_lighthouse.png">
 
 ## Проверка Vector
 <img src="./screenshots/05_vector_running.png">
