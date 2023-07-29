@@ -140,6 +140,7 @@
 
 
 <details> <summary>Листинг --check</summary>
+
 ```bash
 root@exe-ubuntu:/prom/devops-netology/08-ansible-03-yandex/playbook# ansible-playbook -i inventory/prod.yml playbook.yml --check
 
@@ -219,7 +220,6 @@ PLAY RECAP *********************************************************************
 vm01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=2    rescued=1    ignored=0   
 vm02                       : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 vm03                       : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-
 ```
 </details>
 
@@ -234,6 +234,7 @@ vm03                       : ok=8    changed=0    unreachable=0    failed=0    s
 
 
 <details> <summary>Листинг --diff</summary>
+
 ```bash
 root@exe-ubuntu:/prom/devops-netology/08-ansible-03-yandex/playbook# ansible-playbook -i inventory/prod.yml playbook.yml --diff
 
@@ -313,8 +314,8 @@ PLAY RECAP *********************************************************************
 vm01                       : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=1    ignored=0   
 vm02                       : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 vm03                       : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0 
-
 ```
+
 </details>
 
 
