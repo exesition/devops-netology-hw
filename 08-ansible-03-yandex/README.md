@@ -326,8 +326,22 @@ vm03                       : ok=8    changed=0    unreachable=0    failed=0    s
 
 8. Повторно запустите playbook с флагом `--diff` и убедитесь, что playbook идемпотентен.
 9. Подготовьте README.md-файл по своему playbook. В нём должно быть описано: что делает playbook, какие у него есть параметры и теги.
+
+------ 
+
+
+Ссылка на файл README.md:<br>
+ [README.md](./playbook/group_vars/README.md)
+
+------ 
+
 10. Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-03-yandex` на фиксирующий коммит, в ответ предоставьте ссылку на него.
 
+------
+
+[tag](https://github.com/exesition/devops-netology-hw/releases/tag/08-ansible-03-yandex)
+
+------
 
 ## Проверка Lighthouse и Nginx
 <img src="./screenshots/06_lighthouse.png">
