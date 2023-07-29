@@ -58,12 +58,12 @@ LightHouse | Create config - Создается файл конфигураци�
 ```
 
 ## Для Nginx:
+```
 Nginx | Install dependencies - Устанавливается зависимость epel-release
 Nginx | Install nginx - Устанавливается Nginx с помощью модуля ansible.builtin.yum
 Nginx | Template config - Создается файл конфигурации Nginx из шаблона с помощью модуля ansible.builtin.template
 ```
 
-```
 ## Tags
 
 ### Clickhouse
@@ -79,9 +79,7 @@ Nginx | Template config - Создается файл конфигурации N
 - `nginx` - установка только `nginx`
 - `lighthouse` - установка только `lighthouse`
 
-```
 
 ```
 запуска происходит из файла playbook.yml
-
 ```
