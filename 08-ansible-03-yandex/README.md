@@ -221,7 +221,6 @@ vm02                       : ok=6    changed=0    unreachable=0    failed=0    s
 vm03                       : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 
 ```
-
 </details>
 
 
@@ -316,7 +315,6 @@ PLAY RECAP *********************************************************************
 vm01                       : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=1    ignored=0   
 vm02                       : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 vm03                       : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0 
-
 
 ```
 </details>
