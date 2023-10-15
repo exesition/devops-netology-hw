@@ -81,8 +81,9 @@
 **Ответ:**<br>
 
 Загрузил артефакт с необходимыми параметрами:
+
 <p align="center">
-  <img src="./screenshots/05_nexus.png>
+  <img src="./screenshots/05_nexus.png">
 </p>
 
 Ссылка на  исправленный файл:<br>
