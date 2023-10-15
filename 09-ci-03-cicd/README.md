@@ -88,7 +88,7 @@
 Ссылка на файл:<br>
  [maven-metadata.xml](./09-ci-03-cicd/maven-metadata.xml) <br>
 
----
+--- 
 
 ### Знакомство с Maven
 
