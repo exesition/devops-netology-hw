@@ -1,0 +1,6 @@
+projectKey=netology
+serverUrl=http://130.193.50.87:9001
+serverVersion=9.1.0.47736
+dashboardUrl=http://130.193.50.87:9001/dashboard?id=netology
+ceTaskId=AYPEF8K7me-1SV6CmvkU
+ceTaskUrl=http://130.193.50.87:9001/api/ce/task?id=AYPEF8K7me-1SV6CmvkU
