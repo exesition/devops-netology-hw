@@ -52,9 +52,11 @@
 </p>
 
 Повторный прогон анализатором после исправления ошибок
+
 <p align="center">
-  <img src="./screenshots/04_sonarcheck.png>
+  <img src="./screenshots/04_sonarcheck.png">
 </p>
+
 
 ---
 
@@ -84,7 +86,7 @@
 </p>
 
 Ссылка на файл:<br>
- [maven-metadata.xml](./maven-metadata.xml) <br>
+ [maven-metadata.xml](./09-ci-03-cicd/maven-metadata.xml) <br>
 
 ---
 
@@ -119,7 +121,7 @@ java-8_282-distrib.tar.gz  java-8_282-distrib.tar.gz.sha1  java-8_282.pom.lastUp
 ```
 
 Ссылка на  исправленный файл:<br>
- [pom.xml](./09-ci-03-cicd\mvn\pom.xml) <br>
+ [pom.xml](./09-ci-03-cicd/mvn/pom.xml) <br>
 
 ---
 
