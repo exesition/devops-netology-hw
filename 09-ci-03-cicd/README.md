@@ -85,8 +85,9 @@
   <img src="./screenshots/05_nexus.png>
 </p>
 
-Ссылка на файл:<br>
+Ссылка на  исправленный файл:<br>
  [maven-metadata.xml](https://github.com/exesition/devops-netology-hw/blob/main/09-ci-03-cicd/maven-metadata.xml) <br>
+
 
 
 --- 
@@ -122,7 +123,7 @@ java-8_282-distrib.tar.gz  java-8_282-distrib.tar.gz.sha1  java-8_282.pom.lastUp
 ```
 
 Ссылка на  исправленный файл:<br>
- [pom.xml](https://github.com/exesition/devops-netology-hw/blob/main/09-ci-03-cicd/mvn/pom.xml <br>
+ [pom.xml](https://github.com/exesition/devops-netology-hw/blob/main/09-ci-03-cicd/mvn/pom.xml) <br>
 
 
 ---
