@@ -36,11 +36,17 @@ Bugfix
 <p align="center">
   <img src="./screenshots/bugfix_shc.png">
 </p>
+<p align="center">
+  <img src="./screenshots/bugfix_shc_er.png">
+</p>
 
 
 Other tasks
 <p align="center">
   <img src="./screenshots/tasks_shc.png">
+</p>
+<p align="center">
+  <img src="./screenshots/tasks_shc_er.png">
 </p>
 
 ---
@@ -48,12 +54,29 @@ Other tasks
 **Что нужно сделать**
 
 1. Создайте задачу с типом bug, попытайтесь провести его по всему workflow до Done. 
+<p align="center">
+  <img src="./screenshots/bug-task.png">
+</p>
+<p align="center">
+  <img src="./screenshots/bug-tas_logk.png">
+</p>
 2. Создайте задачу с типом epic, к ней привяжите несколько задач с типом task, проведите их по всему workflow до Done. 
+<p align="center">
+  <img src="./screenshots/epic.png">
+</p>
 3. При проведении обеих задач по статусам используйте kanban. 
 4. Верните задачи в статус Open.
+<p align="center">
+  <img src="./screenshots/epic_kanban.png">
+</p>
 5. Перейдите в Scrum, запланируйте новый спринт, состоящий из задач эпика и одного бага, стартуйте спринт, проведите задачи до состояния Closed. Закройте спринт.
+<p align="center">
+  <img src="./screenshots/sprint.png">
+</p>
+<p align="center">
+  <img src="./screenshots/sprintend.png">
+</p>
 6. Если всё отработалось в рамках ожидания — выгрузите схемы workflow для импорта в XML. Файлы с workflow и скриншоты workflow приложите к решению задания.
-
 ---
 
 **Ответ**
