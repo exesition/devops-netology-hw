@@ -1,16 +1,11 @@
-
-
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE workflow PUBLIC "-//OpenSymphony Group//DTD OSWorkflow 2.8//EN" "http://www.opensymphony.com/osworkflow/workflow_2_8.dtd">
 <workflow>
   <meta name="jira.description"></meta>
   <meta name="jira.update.author.id">5e9d7ee9d31fdf0c0d63487b</meta>
   <meta name="jira.update.author.key">5e9d7ee9d31fdf0c0d67347b</meta>
-  <meta name="jira.updated.date">1697356759000</meta>
+  <meta name="jira.updated.date">1697956661000</meta>
   <initial-actions>
     <action id="1" name="Create">
-      <meta name="jira.description"></meta>
-      <meta name="jira.fieldscreen.id"></meta>
       <validators>
         <validator name="" type="class">
           <arg name="class.name">com.atlassian.jira.workflow.validator.PermissionValidator</arg>
@@ -39,7 +34,7 @@
     <step id="1" name="Open">
       <meta name="jira.status.id">1</meta>
       <actions>
-        <action id="11" name="To reproduce">
+        <action id="11" name="Bug reproduce">
           <meta name="jira.description"></meta>
           <meta name="jira.fieldscreen.id"></meta>
           <results>
@@ -68,35 +63,9 @@
       </actions>
     </step>
     <step id="2" name="On reproduce">
-      <meta name="jira.status.id">10013</meta>
+      <meta name="jira.status.id">10011</meta>
       <actions>
-        <action id="21" name="Reopen task">
-          <meta name="jira.description"></meta>
-          <meta name="jira.fieldscreen.id"></meta>
-          <results>
-            <unconditional-result old-status="null" status="null" step="1">
-              <post-functions>
-                <function type="class">
-                  <arg name="class.name">com.atlassian.jira.workflow.function.issue.UpdateIssueStatusFunction</arg>
-                </function>
-                <function type="class">
-                  <arg name="class.name">com.atlassian.jira.workflow.function.misc.CreateCommentFunction</arg>
-                </function>
-                <function type="class">
-                  <arg name="class.name">com.atlassian.jira.workflow.function.issue.GenerateChangeHistoryFunction</arg>
-                </function>
-                <function type="class">
-                  <arg name="class.name">com.atlassian.jira.workflow.function.issue.IssueReindexFunction</arg>
-                </function>
-                <function type="class">
-                  <arg name="class.name">com.atlassian.jira.workflow.function.event.FireIssueEventFunction</arg>
-                  <arg name="eventTypeId">13</arg>
-                </function>
-              </post-functions>
-            </unconditional-result>
-          </results>
-        </action>
-        <action id="31" name="Reproduce is done">
+        <action id="21" name="Bug reproduced">
           <meta name="jira.description"></meta>
           <meta name="jira.fieldscreen.id"></meta>
           <results>
@@ -122,12 +91,38 @@
             </unconditional-result>
           </results>
         </action>
+        <action id="31" name="Bug open">
+          <meta name="jira.description"></meta>
+          <meta name="jira.fieldscreen.id"></meta>
+          <results>
+            <unconditional-result old-status="null" status="null" step="1">
+              <post-functions>
+                <function type="class">
+                  <arg name="class.name">com.atlassian.jira.workflow.function.issue.UpdateIssueStatusFunction</arg>
+                </function>
+                <function type="class">
+                  <arg name="class.name">com.atlassian.jira.workflow.function.misc.CreateCommentFunction</arg>
+                </function>
+                <function type="class">
+                  <arg name="class.name">com.atlassian.jira.workflow.function.issue.GenerateChangeHistoryFunction</arg>
+                </function>
+                <function type="class">
+                  <arg name="class.name">com.atlassian.jira.workflow.function.issue.IssueReindexFunction</arg>
+                </function>
+                <function type="class">
+                  <arg name="class.name">com.atlassian.jira.workflow.function.event.FireIssueEventFunction</arg>
+                  <arg name="eventTypeId">13</arg>
+                </function>
+              </post-functions>
+            </unconditional-result>
+          </results>
+        </action>
       </actions>
     </step>
     <step id="3" name="Done reproduce">
-      <meta name="jira.status.id">10014</meta>
+      <meta name="jira.status.id">10012</meta>
       <actions>
-        <action id="41" name="To fix">
+        <action id="41" name="Bug to fix">
           <meta name="jira.description"></meta>
           <meta name="jira.fieldscreen.id"></meta>
           <results>
@@ -156,9 +151,9 @@
       </actions>
     </step>
     <step id="4" name="On fix">
-      <meta name="jira.status.id">10015</meta>
+      <meta name="jira.status.id">10010</meta>
       <actions>
-        <action id="51" name="Fix is done">
+        <action id="51" name="Fixed bug">
           <meta name="jira.description"></meta>
           <meta name="jira.fieldscreen.id"></meta>
           <results>
@@ -184,7 +179,7 @@
             </unconditional-result>
           </results>
         </action>
-        <action id="61" name="Return to reproduce">
+        <action id="61" name="Bug from fix to reproduce">
           <meta name="jira.description"></meta>
           <meta name="jira.fieldscreen.id"></meta>
           <results>
@@ -213,9 +208,9 @@
       </actions>
     </step>
     <step id="5" name="Done fix">
-      <meta name="jira.status.id">10016</meta>
+      <meta name="jira.status.id">10006</meta>
       <actions>
-        <action id="71" name="To test">
+        <action id="71" name="Bug to test">
           <meta name="jira.description"></meta>
           <meta name="jira.fieldscreen.id"></meta>
           <results>
@@ -244,9 +239,9 @@
       </actions>
     </step>
     <step id="6" name="On test">
-      <meta name="jira.status.id">10017</meta>
+      <meta name="jira.status.id">10007</meta>
       <actions>
-        <action id="81" name="Bug is fixed">
+        <action id="81" name="Bug tested">
           <meta name="jira.description"></meta>
           <meta name="jira.fieldscreen.id"></meta>
           <results>
@@ -272,7 +267,7 @@
             </unconditional-result>
           </results>
         </action>
-        <action id="111" name="Return to fix">
+        <action id="91" name="Tested bug to fix">
           <meta name="jira.description"></meta>
           <meta name="jira.fieldscreen.id"></meta>
           <results>
@@ -301,9 +296,9 @@
       </actions>
     </step>
     <step id="7" name="Done">
-      <meta name="jira.status.id">10018</meta>
+      <meta name="jira.status.id">10005</meta>
       <actions>
-        <action id="91" name="Task is closed">
+        <action id="101" name="Closed bug">
           <meta name="jira.description"></meta>
           <meta name="jira.fieldscreen.id"></meta>
           <results>
@@ -329,9 +324,9 @@
             </unconditional-result>
           </results>
         </action>
-        <action id="101" name="Reopen task">
+        <action id="111" name="Bug open" view="fieldscreen">
           <meta name="jira.description"></meta>
-          <meta name="jira.fieldscreen.id"></meta>
+          <meta name="jira.fieldscreen.id">10009</meta>
           <results>
             <unconditional-result old-status="null" status="null" step="1">
               <post-functions>
