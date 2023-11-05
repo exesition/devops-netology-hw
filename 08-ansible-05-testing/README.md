@@ -103,22 +103,22 @@ platforms:
 ```
 5. Запустите тестирование роли повторно и проверьте, что оно прошло успешно.
 <p align="center">
-  <img src="./screenshots/01.png">
+  <img src="./screenshots/1.png">
 </p>
 <p align="center">
-  <img src="./screenshots/02.png">
+  <img src="./screenshots/2.png">
 </p>
 <p align="center">
-  <img src="./screenshots/03.png">
+  <img src="./screenshots/3.png">
 </p>
 <p align="center">
-  <img src="./screenshots/04.png">
+  <img src="./screenshots/4.png">
 </p>
 <p align="center">
-  <img src="./screenshots/05.png">
+  <img src="./screenshots/5.png">
 </p>
 <p align="center">
-  <img src="./screenshots/06.png">
+  <img src="./screenshots/6.png">
 </p>
 
 6. Добавьте новый тег на коммит с рабочим сценарием в соответствии с семантическим версионированием.
