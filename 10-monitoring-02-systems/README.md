@@ -91,7 +91,7 @@ Pull система мониторинга:
 `./data:/var/lib:Z`
 #
 <p align="center">
-    <img width="1200 height="600" src="/screenshots/1.png">
+    <img width="1200 height="600" src="./screenshots/1.png">
 </p>
 
 8. Перейдите в веб-интерфейс Chronograf (http://localhost:8888) и откройте вкладку Data explorer.
@@ -104,11 +104,11 @@ Pull система мониторинга:
 Для выполнения задания приведите скриншот с отображением метрик утилизации cpu из веб-интерфейса.
 #
 <p align="center">
-    <img width="1200 height="600" src="/screenshots/2.png">
+    <img width="1200 height="600" src="./screenshots/2.png">
 </p>
 
 <p align="center">
-    <img width="1200 height="600" src="/screenshots/3.png">
+    <img width="1200 height="600" src="./screenshots/3.png">
 </p>
 9. Изучите список [telegraf inputs](https://github.com/influxdata/telegraf/tree/master/plugins/inputs). 
 Добавьте в конфигурацию telegraf следующий плагин - [docker](https://github.com/influxdata/telegraf/tree/master/plugins/inputs/docker):
@@ -140,11 +140,11 @@ Pull система мониторинга:
 Факультативно можете изучить какие метрики собирает telegraf после выполнения данного задания.
 
 <p align="center">
-    <img width="1200 height="600" src="/screenshots/4.png">
+    <img width="1200 height="600" src="./screenshots/4.png">
 </p>
 
 <p align="center">
-    <img width="1200 height="600" src="/screenshots/5.png">
+    <img width="1200 height="600" src="./screenshots/5.png">
 </p>
 
 ## Дополнительное задание (со звездочкой*) - необязательно к выполнению
