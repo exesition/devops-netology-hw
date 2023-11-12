@@ -4,17 +4,17 @@
 
 1. Создать два VM: для jenkins-master и jenkins-agent.
 <p align="center">
-    <img width="1200 height="600" src="./screenshots/01_vhost.png">
+    <img width="1200 height="600" src="./screenshots/01_vhost.PNG">
 </p>
-2. Установить Jenkins при помощи playbook.
+1. Установить Jenkins при помощи playbook.
 <p align="center">
     <img width="1200 height="600" src="./screenshots/01_ansible.png">
 </p>
-3. Запустить и проверить работоспособность.
+1. Запустить и проверить работоспособность.
 <p align="center">
     <img width="1200 height="600" src="./screenshots/01_webjenkins.png">
 </p>
-4. Сделать первоначальную настройку.
+1. Сделать первоначальную настройку.
 <p align="center">
     <img width="1200 height="600" src="./screenshots/01_sshcon.png">
 </p>
@@ -48,8 +48,7 @@
     <img width="1200 height="600" src="./screenshots/02_04multibranch.png">
 </p>
 
-5. Создать Scripted Pipeline, наполнить его скриптом из [pipeline](./pipeline).
-[ScriptedJenkinsfile](https://github.com/exesition/vector-role/blob/main/ScriptedJenkinsfile)
+5. Создать Scripted Pipeline, наполнить его скриптом из [pipeline](./pipeline). <br>
 
 6. Внести необходимые изменения, чтобы Pipeline запускал `ansible-playbook` без флагов `--check --diff`, если не установлен параметр при запуске джобы (prod_run = True). По умолчанию параметр имеет значение False и запускает прогон с флагами `--check --diff`.
 <p align="center">
@@ -61,6 +60,9 @@
 **[ScriptedJenkinsfile](./ScriptedJenkinsfile)**.
 <p align="center">
     <img width="1200 height="600" src="./screenshots/02_07scryipted.png">
+</p>
+<p align="center">
+    <img width="1200 height="600" src="./screenshots/02_07console.png">
 </p>
 
 8. Отправить ссылку на репозиторий с ролью и Declarative Pipeline и Scripted Pipeline.
