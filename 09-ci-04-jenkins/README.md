@@ -68,8 +68,8 @@
 8. Отправить ссылку на репозиторий с ролью и Declarative Pipeline и Scripted Pipeline.
 
 [Role](https://github.com/exesition/vector-role/) <br>
-[DeclarativePipeline](https://github.com/exesition/09-ci-04-jenkins/infrastructure/files/DeclarativePipeline) <br>
-[ScriptedJenkinsfile](https://github.com/exesition/09-ci-04-jenkins/infrastructure/files/ScriptedJenkinsfile) <br>
+[DeclarativePipeline](https://github.com/exesition/devops-netology-hw/blob/main/09-ci-04-jenkins/infrastructure/files/DeclarativePipeline) <br>
+[ScriptedJenkinsfile](https://github.com/exesition/devops-netology-hw/blob/main/09-ci-04-jenkins/infrastructure/files/ScriptedJenkinsfile) <br>
 
 
 ## Необязательная часть
