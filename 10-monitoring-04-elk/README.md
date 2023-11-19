@@ -55,7 +55,7 @@ Docker контейнеры
 
 Web Kibana
 <p align="center">
-  <img src="./screenshots/01_docelk.png">
+  <img src="./screenshots/01_kibana.png">
 </p>
 
 ---
