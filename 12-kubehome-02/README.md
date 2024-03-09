@@ -36,7 +36,7 @@
 
 **Ответ:**<br>
 
-Создаем Pod по следующему манифесту:<br>
+Создаем Pod по следующему манифест-файлу:<br>
 ```yaml
 
 apiVersion: v1
@@ -52,9 +52,10 @@ spec:
 
 ```
 
-Применяем его и смотрим появился ли pod:<br>
+Применяем его и проверяем поднялся ли pod, а также делаем проброс согласно требованию в задаче:<br>
 ```bash
 kubectl apply -f pod.yaml
+kubectl port-forward hello-world 80:8080 --address='0.0.0.0'
 ```
 
 
@@ -83,7 +84,8 @@ kubectl delete pod hello-world
 
 **Ответ:**<br>
 
-Создаем единый манифест-файл описывающий все требования выше:<br>
+Создаем новый единый манифест-файл описывающий все требования выше:<br>
+
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -113,6 +115,9 @@ spec:
       targetPort: netology-port
 
 ```
+
+Далее проверяем запущенные поды, сервисы и делаем проброс для проверки работы:
+
 <p align="center">
   <img src="./screenshots/03_kubectl_podservice.png">
 </p>
@@ -122,13 +127,18 @@ spec:
 </p>
 
 
-P.S. Так и не понял чем был занят 80 порт. По netstat показывало, что какой то из контейнеров. 
-В самом kubectl пробовал смотреть через
+
+Так и не понял чем был занят 80 порт с учетом что под из первой задаче был остановлен. По netstat показывало, что какой то из контейнеров. 
+В самом kubectl пробовал смотреть через<br>
+
 ```bash
+
  kubectl get <podname> --all-namespaces -o wide 
  kubectl describe pod <podname> -n <namespace>
+
 ```
-Думаю позже разберусь.
+
+Думаю позже разберусь так как на результат текущей работы это не влияет
 
 ------
 
@@ -144,114 +154,3 @@ P.S. Так и не понял чем был занят 80 порт. По netsta
 Зачёт — выполнены все задания, ответы даны в развернутой форме, приложены соответствующие скриншоты и файлы проекта, в выполненных заданиях нет противоречий и нарушения логики.
 
 На доработку — задание выполнено частично или не выполнено, в логике выполнения заданий есть противоречия, существенные недостатки.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=========
-==========
-==========
-
-
-### Задание 1. Установка MicroK8S
-
-1. Установить MicroK8S на локальную машину или на удалённую виртуальную машину.
-
-Установил на локальную машину
-
-<p align="center">
-  <img src="./screenshots/01_kubectl_status.png">
-</p>
-
-2. Установить dashboard.
-
-```bash
-microk8s.enable dashboard
-microk8s status
-```
-<p align="center">
-  <img src="./screenshots/03_kubectl_dashboard.png">
-</p>
-
-3. Сгенерировать сертификат для подключения к внешнему ip-адресу.
-
-Так как используется локальная машина, то сгенерил для нее 
-```bash
-microk8s refresh-certs --cert front-proxy-client.crt
-```
-<p align="center">
-  <img src="./screenshots/04_kubectl_certs.png">
-</p>
-
-
-------
-
-### Задание 2. Установка и настройка локального kubectl
-1. Установить на локальную машину kubectl.
-
-<p align="center">
-  <img src="./screenshots/02_kubectl_version.png">
-</p>
-
-2. Настроить локально подключение к кластеру.
-
-<p align="center">
-  <img src="./screenshots/08_kubectl_connect.png">
-</p>
-
-
-3. Подключиться к дашборду с помощью port-forward.
-
-Перед подключением к WEB-у генерируем токен по которому будем авторизовываться 
-
-```bash
-microk8s kubectl describe secret -n kube-system microk8s-dashboard-token
-microk8s kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:443
-```
-
-<p align="center">
-  <img src="./screenshots/05_kubectl_token.png">
-</p>
-
-<p align="center">
-  <img src="./screenshots/06_kubectl_forwarder.png">
-</p>
-
-<p align="center">
-  <img src="./screenshots/07_kubectl_web_login.png">
-</p>
-
-<p align="center">
-  <img src="./screenshots/07_kubectl_web.png">
-</p>
-
-------
