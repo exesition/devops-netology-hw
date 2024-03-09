@@ -61,7 +61,7 @@
 1. Установить MicroK8S на локальную машину или на удалённую виртуальную машину.
 
 Установил на локальную машину
-<details> <summary>Лог отработки anisble-playbook</summary>
+
 <p align="center">
   <img src="./screenshots/01_kubectl_status.png">
 </p>
