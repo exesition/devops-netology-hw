@@ -123,7 +123,7 @@ spec:
 </p>
 
 <p align="center">
-  <img src="./screenshots/04_kubectl_web.png>
+  <img src="./screenshots/04_kubectl_web.png">
 </p>
 
 
