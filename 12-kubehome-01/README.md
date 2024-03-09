@@ -111,7 +111,7 @@ microk8s kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:
 </p>
 
 <p align="center">
-  <img src="./screenshots/08_kubectl_connect.png">
+  <img src="./screenshots/06_kubectl_forwarder.png">
 </p>
 
 <p align="center">
