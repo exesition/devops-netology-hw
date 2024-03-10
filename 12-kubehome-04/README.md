@@ -151,8 +151,8 @@ spec:
 
 Итоговые файлы:<br>
 
-[task1/deployment_v1.yaml](./deployment/service_v2.yaml)<br>
-[task1/service_v1.yaml](./service/service_v2.yaml)<br>
+[task1/deployment_v1.yaml](./deployment/deployment_v1.yaml)<br>
+[task1/service_v1.yaml](./service/service_v1.yaml)<br>
 
 ### Задание 2. Создать Service и обеспечить доступ к приложениям снаружи кластера
 
