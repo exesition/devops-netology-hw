@@ -1,0 +1,42 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+ name: deployment
+ labels:
+   app: task_1
+spec:
+ replicas: 1
+ selector:
+   matchLabels:
+     app: task_1
+ template:
+   metadata:
+     labels:
+       app: task_1
+   spec:
+     containers:
+       - name: busybox
+         image: busybox
+         command: ['sh', '-c', 'while true; do echo "test your homework string" >> /share/write.txt; sleep 5; done']
+         volumeMounts:
+         - mountPath: /share
+           name: share
+       - name: network-multitool
+         image: praqma/network-multitool:latest
+         volumeMounts:
+         - mountPath: /share
+           name: share
+         env:
+         - name: HTTP_PORT
+           value: "80"
+         - name: HTTPS_PORT
+           value: "443"
+         ports:
+         - containerPort: 80
+           name: http-port
+         - containerPort: 443
+           name: https-port
+     volumes:
+     - name: share
+       emptyDir: {}
+
