@@ -374,24 +374,24 @@ spec:
 Подготовил чарт, необходимо его задеплоить и расплодить:
 
 <p align="center">
-  <img src="./screenshots/02_helm_02.png">
+  <img src="./screenshots/01_helm_02.png">
 </p>
 
 <p align="center">
-  <img src="./screenshots/02_helm_03.png">
+  <img src="./screenshots/01_helm_03.png">
 </p>
 
 
 Далее деплоим в namespace=`app1`
 <p align="center">
-  <img src="./screenshots/02_helm_04.png">
+  <img src="./screenshots/01_helm_04.png">
 </p>
 
 Теперь в namespace=`app2`
 <p align="center">
-  <img src="./screenshots/02_helm_05.png">
+  <img src="./screenshots/01_helm_05.png">
 </p>
 
 <p align="center">
-  <img src="./screenshots/02_helm_06.png">
+  <img src="./screenshots/01_helm_06.png">
 </p>
