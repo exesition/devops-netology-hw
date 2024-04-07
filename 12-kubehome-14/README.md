@@ -39,12 +39,12 @@
 
 Список используемых манифестов:
 
-| Deployment
-|
+| Deployment<br>
+|<br>
 |-[frontend.yml](./manifest/frontend.yml)<br>
 |-[backend.yml](./manifest/backend.yml)<br>
 |-[cache.yml](./manifest/cache.yml)<br>
-|_Policy
+|_Policy<br>
   |-[default-policy.yml](./manifest/default-policy.yml)<br>
   |-[front-back.yml](./manifest/front-back.yml)<br>
   |-[back-cache.yml](./manifest/back-cache.yml)<br>
