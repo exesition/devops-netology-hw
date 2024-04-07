@@ -91,6 +91,8 @@ Events:
   Type    Reason             Age    From                   Message
   ----    ------             ----   ----                   -------
   Normal  ScalingReplicaSet  3m42s  deployment-controller  Scaled up replica set web-consumer-5f87765478 to 2
+```
+```
 root@exe-ubuntu:~$ kubectl get po -n web
 NAME                            READY   STATUS    RESTARTS   AGE
 web-consumer-7d41137401-3fs64   1/1     Running   0          4m40s
@@ -112,7 +114,6 @@ curl: (6) Couldn't resolve host 'auth-db'
 В логах подов web-consumer наблюдается ошибка "curl: (6) Couldn't resolve host 'auth-db'",
 Каких либо других явных проблем при изучение конфигурации мной обнаружено не было.
 В целом, это предсказуемое поведение т.к. сервис "auth-db" для подов web-consumer находится в другом namespace.
-Каких либо других явных проблем при изучение конфигурации мной обнаружено не было.
 
 Для решения найденной проблемы требуется перезалить деплоймент и добавить в манифесте имя namepace к днс имени пода (auth-db.data) 
 
