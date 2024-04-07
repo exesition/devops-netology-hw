@@ -41,13 +41,13 @@
 
 | Deployment<br>
 |<br>
-|-[frontend.yml](./manifest/frontend.yml)<br>
-|-[backend.yml](./manifest/backend.yml)<br>
-|-[cache.yml](./manifest/cache.yml)<br>
-|_Policy<br>
-  |-[default-policy.yml](./manifest/default-policy.yml)<br>
-  |-[front-back.yml](./manifest/front-back.yml)<br>
-  |-[back-cache.yml](./manifest/back-cache.yml)<br>
+&nbsp;1|-[frontend.yml](./manifest/frontend.yml)<br>
+&nbsp;1|-[backend.yml](./manifest/backend.yml)<br>
+&nbsp;1|-[cache.yml](./manifest/cache.yml)<br>
+&nbsp;2|_Policy<br>
+&nbsp;3|-[default-policy.yml](./manifest/default-policy.yml)<br>
+&nbsp;3|-[front-back.yml](./manifest/front-back.yml)<br>
+&nbsp;3|-[back-cache.yml](./manifest/back-cache.yml)<br>
 
 Применяем манифесты для сервисов:    
 
