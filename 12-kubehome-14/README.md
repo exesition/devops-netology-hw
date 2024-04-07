@@ -40,14 +40,13 @@
 Список используемых манифестов:
 
 |_Deployment<br>
-|<br>
 |-[frontend.yml](./manifest/frontend.yml)<br>
 |-[backend.yml](./manifest/backend.yml)<br>
 |-[cache.yml](./manifest/cache.yml)<br>
-&nbsp;&nbsp;|_Policy<br>
-&nbsp;&nbsp;&nbsp;|-[default-policy.yml](./manifest/default-policy.yml)<br>
-&nbsp;&nbsp;&nbsp;|-[front-back.yml](./manifest/front-back.yml)<br>
-&nbsp;&nbsp;&nbsp;|-[back-cache.yml](./manifest/back-cache.yml)<br>
+|__Policy<br>
+&nbsp;&nbsp;|-[default-policy.yml](./manifest/default-policy.yml)<br>
+&nbsp;&nbsp;|-[front-back.yml](./manifest/front-back.yml)<br>
+&nbsp;&nbsp;|-[back-cache.yml](./manifest/back-cache.yml)<br>
 
 Применяем манифесты для сервисов:    
 
