@@ -1,0 +1,25 @@
+[master0]
+%{~ for i in master0 ~}
+
+${i["network_interface"][0]["nat_ip_address"]}
+%{~ endfor ~}
+
+[worker0]
+%{~ for i in worker0 ~}
+
+${i["network_interface"][0]["nat_ip_address"]}
+%{~ endfor ~}   
+
+[worker1]
+%{~ for i in worker1 ~}
+
+${i["network_interface"][0]["nat_ip_address"]}
+%{~ endfor ~}
+
+
+[all:vars]
+ansible_connection=ssh
+ansible_user=root
+ansible_ssh_private_key_file=/root/.ssh/id_ed25519
+ansible_ssh_common_args='-o StrictHostKeyChecking=accept-new'
+ansible_python_interpreter=/usr/bin/python3
