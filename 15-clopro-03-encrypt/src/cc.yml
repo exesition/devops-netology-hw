@@ -1,0 +1,22 @@
+#Cloud-config
+
+users:
+  - name: root
+    groups: sudo
+    shell: /bin/bash
+    sudo: ["ALL=(ALL) NOPASSWD:ALL"]
+    ssh_authorized_keys:
+      - ${ssh_public_key}
+write_files:
+  - path: /var/www/html/index.nginx-debian.html
+    content: |
+      <html>
+      <body>
+        <h1>Bitcoin everywhere</h1>
+        <p>Welcome to the pictures-bucket web page!</p>
+        <br></br>
+        <img src="http://pictures-bucket.storage.yandexcloud.net/bitoc.png"/>
+      </body>
+      </html>
+    owner: "root:root"
+    permissions: "0644"
