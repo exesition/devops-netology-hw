@@ -19,7 +19,7 @@
 ------
 
 **Ответ:**<br>
-
+Сделал только основное задание п.1
 Необходимо изменить правило создания bucket для этого вносим изменения в ранее созданный файл:
 
 [bucket.tf](https://github.com/exesition/devops-netology-hw/blob/main/15-clopro-02-nlb/src/bucket.tf)<br>
@@ -101,4 +101,4 @@ resource "yandex_storage_object" "pictures" {
 </p>
 
 Конечный файл с учетом изменений:<br>
-[bucket.tf](/src/bucket.tf)<br>
+[bucket.tf](./src/bucket.tf)<br>
