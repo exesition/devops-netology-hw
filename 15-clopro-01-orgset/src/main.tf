@@ -39,7 +39,7 @@ data "yandex_compute_image" "nat-instance" {
   family = var.family_vm_nat
 }
 data "template_file" "cloudinit" {
-  template = file("./secure.yml")
+  template = file("./security.yml")
   vars = {
     ssh_public_key = file("~/.ssh/id_ed25519.pub")
   }
