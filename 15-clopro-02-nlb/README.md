@@ -28,16 +28,16 @@
 
 Подготовим manifest для развертывания всей необходимой инфраструктуры:
 
-[nlb.tf](src/nlb.tf)
-[ig.tf](src/ig.tf)
-[bucket.tf](src/bucket.tf)
-[sa.tf](src/sa.tf)
-[main.tf](src/main.tf)
-[network.tf](src/network.tf)
-[variables.tf](src/variables.tf)
-[locals.tf](src/locals.tf)
-[output.tf](src/output.tf)
-[providers.tf](src/providers.tf)
+[nlb.tf](src/nlb.tf)<br>
+[ig.tf](src/ig.tf)<br>
+[bucket.tf](src/bucket.tf)<br>
+[sa.tf](src/sa.tf)<br>
+[main.tf](src/main.tf)<br>
+[network.tf](src/network.tf)<br>
+[variables.tf](src/variables.tf)<br>
+[locals.tf](src/locals.tf)<br>
+[output.tf](src/output.tf)<br>
+[providers.tf](src/providers.tf)<br>
 
 Деплой инфраструктуры:
 
